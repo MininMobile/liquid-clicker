@@ -7,3 +7,6 @@ let win;
 function createWindow() {
 	win = new BrowserWindow();
 }
+
+app.on("window-all-closed", () => { app.quit(); });
+app.on("ready", createWindow);
