@@ -7,5 +7,5 @@ function Start() {
 	var maxLevel = 10;
 	var level = 0;
 
-	c.style([["background", "url('background.jpg')"]]);
+	c.style([["background", "url('background.jpg')"], ["background-position", "center"], ["background-size", "cover"]]);
 }
