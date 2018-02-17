@@ -13,7 +13,7 @@ function createWindow() {
 		slashes: true
 	}));
 
-	win.setSize(616, 509);
+	win.setSize(614, 507);
 	win.focus();
 
 	win.on("closed", () => {
