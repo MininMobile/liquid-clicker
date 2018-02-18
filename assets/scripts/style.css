@@ -23,11 +23,11 @@ body {
 }
 
 #display p {
-	box-shadow: 0 2px 5px black;
+	text-shadow: 0 2px 5px black;
 }
 
 #button {
-	position: inherit;
+	position: inherit !important;
 	background: black;
 	border-radius: 3px;
 	color: white;
