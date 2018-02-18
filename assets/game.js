@@ -5,6 +5,7 @@ function Start() {
 	const c = new cvg.Canvas(canvas, "600px", "450px", 60);
 
 	var maxLevel = 10000; // mL
+	var buttonLevel = 10;
 	var level = 0;
 
 	c.style([["background", "url('background.jpg')"],
@@ -16,4 +17,13 @@ function Start() {
 
 	button.style([["background", "black"]]);
 	button.move({y:"100px"});
+
+	c.on("loop", () => {
+		levelDisplay.content(level.toString());
+	});
+
+	button.element.onpointerup = (e) => {
+		level += buttonLevel;
+		if (level > maxLevel) level = maxLevel;
+	}
 }
