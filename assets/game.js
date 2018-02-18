@@ -21,6 +21,7 @@ function Start() {
 	gameRow.style([["position", "inherit"],
 			["display", "flex"],
 			["flex", "1"],
+			["flex-direction", "column"],
 			["justify-content", "center"],
 			["align-items", "center"]]);
 
@@ -34,7 +35,14 @@ function Start() {
 	var levelDisplay = gameRow.new("box", "display", false);
 	var button = gameRow.new("box", "button");
 
-	levelDisplay.style([["position", "inherit"]]);
+	levelDisplay.style([["position", "inherit"],
+			["display", "flex"],
+			["justify-content", "center"],
+			["align-items", "center"],
+			["border-radius", "50%"],
+			["background", "rgba(0,0,0,0.5)"],
+			["color", "white"]]);
+	levelDisplay.size({width:"100px", height:"100px"});
 
 	button.style([["position", "inherit"],
 			["background", "black"],
