@@ -16,8 +16,11 @@ function Start() {
 	var buttonDownLevel = 5;
 	var level = 0;
 
-	var levelDisplay = c.new("text", "display");
-	var button = c.new("box", "button");
+	var gameRow = c.new("box", "row1");
+	gameRow.style([["display", "flex"], ["background", "rgba(0,0,0,0.2)"]]);
+
+	var levelDisplay = gameRow.new("text", "display");
+	var button = gameRow.new("box", "button");
 
 	button.style([["background", "black"],
 			["border-radius", "3px"],
