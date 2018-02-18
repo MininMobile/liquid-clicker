@@ -18,9 +18,9 @@ function Start() {
 	var levelDisplay = c.new("text", "display");
 	var button = c.new("box", "button");
 
-	button.style([["background", "black"], ["border-radius", "3px"], ["color", "white"]]);
+	button.style([["background", "black"], ["border-radius", "3px"], ["color", "white"], ["padding", "0.2em"]]);
 	button.move({y:"100px"});
-	button.size({height:"25px"});
+	button.size({height:"25px", width:"135px"});
 	button.content("ｄｉｓｐｅｎｓｅ");
 
 	c.on("loop", () => {
