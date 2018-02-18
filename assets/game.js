@@ -31,10 +31,11 @@ function Start() {
 			["flex", "1"],
 			["background", "rgba(0,0,0,0.2)"]]);
 
-	var levelDisplay = gameRow.new("text", "display");
+	var levelDisplay = gameRow.new("box", "display");
 	var button = gameRow.new("box", "button");
 
 	levelDisplay.style([["position", "inherit"]]);
+	levelDisplay.size({width:"oof", height:"oof"});
 
 	button.style([["position", "inherit"],
 			["background", "black"],
@@ -49,7 +50,7 @@ function Start() {
 	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
 
 	c.on("loop", () => {
-		levelDisplay.content(level.toString());
+		levelDisplay.element.innerHTML = `<p style='margin:0; padding:0;'>${level.toString()}</p>`;
 	});
 
 	button.element.onpointerdown = (e) => {
