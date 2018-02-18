@@ -1,4 +1,6 @@
-* { cursor: default; }
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+* { cursor: default; font-family: 'Nanum Gothic', sans-serif; }
 
 body {
 	margin: 0;
