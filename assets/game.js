@@ -13,4 +13,7 @@ function Start() {
 
 	var levelDisplay = c.new("text", "display");
 	var button = c.new("box", "button");
+
+	button.style([["background", "black"]]);
+	button.move({y:"100px"});
 }
