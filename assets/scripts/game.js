@@ -35,6 +35,9 @@ function Start() {
 	var levelDisplay = gameRow.new("box", "display", false);
 	var button = gameRow.new("box", "button");
 
+	var saveButton = upgradeRow.new("box", "button");
+	var loadButton = upgradeRow.new("box", "button");
+
 	levelDisplay.style([["position", "inherit"],
 			["display", "flex"],
 			["justify-content", "center"],
@@ -45,14 +48,6 @@ function Start() {
 			["margin-bottom", "5em"]]);
 	levelDisplay.size({width:"100px", height:"100px"});
 
-	button.style([["position", "inherit"],
-			["background", "black"],
-			["border-radius", "3px"],
-			["color", "white"],
-			["padding", "0.2em"],
-			["display", "flex"],
-			["justify-content", "center"],
-			["align-items", "center"]]);
 	button.move({y:"100px"});
 	button.size({height:"25px", width:"135px"});
 	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";

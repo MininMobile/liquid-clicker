@@ -25,3 +25,14 @@ body {
 #display p {
 	box-shadow: 0 2px 5px black;
 }
+
+#button {
+	position: inherit;
+	background: black;
+	border-radius: 3px;
+	color: white;
+	padding: 0.2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
