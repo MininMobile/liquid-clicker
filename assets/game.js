@@ -4,7 +4,7 @@ function Start() {
 	const canvas = document.getElementById("canvas");
 	const c = new cvg.Canvas(canvas, "600px", "450px", 60);
 
-	var holding = false;
+	var holding;
 
 	var maxLevel = 10000; // mL
 	var buttonLevel = 10;
@@ -23,20 +23,18 @@ function Start() {
 
 	c.on("loop", () => {
 		levelDisplay.content(level.toString());
-
-		if (holding) {
-			level += buttonDownLevel;
-			if (level > maxLevel) level = maxLevel;
-		}
 	});
 
 	button.element.onpointerdown = (e) => {
-		holding = true;
+		holding = setInterval(() => {
+			level += buttonDownLevel;
+			if (level > maxLevel) level = maxLevel;
+		}, 100);
 	}
 
 	button.element.onpointerup = (e) => {
-		holding = false;
-
+		holding = clearInterval(holding);
+		
 		level += buttonLevel;
 		if (level > maxLevel) level = maxLevel;
 	}
