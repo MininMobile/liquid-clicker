@@ -31,11 +31,10 @@ function Start() {
 			["flex", "1"],
 			["background", "rgba(0,0,0,0.2)"]]);
 
-	var levelDisplay = gameRow.new("box", "display");
+	var levelDisplay = gameRow.new("box", "display", false);
 	var button = gameRow.new("box", "button");
 
 	levelDisplay.style([["position", "inherit"]]);
-	levelDisplay.size({width:"oof", height:"oof"});
 
 	button.style([["position", "inherit"],
 			["background", "black"],
