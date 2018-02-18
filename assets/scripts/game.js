@@ -30,13 +30,23 @@ function Start() {
 	upgradeRow.style([["position", "inherit"],
 			["display", "flex"],
 			["flex", "1"],
+			["flex-direction", "column"],
+			["align-items", "center"],
+			["background", "rgba(0,0,0,0.2)"]]);
+
+	var saveButton = upgradeRow.new("box", "button");
+	var loadButton = upgradeRow.new("box", "button");
+
+	var upgradesContainer = upgradeRow.new("box", "row2-1");
+	upgradesContainer.size({width:"inherit", height:"inherit"});
+	upgradesContainer.style([["position", "inherit"],
+			["display", "flex"],
+			["flex-direction", "column"],
+			["align-items", "center"],
 			["background", "rgba(0,0,0,0.2)"]]);
 
 	var levelDisplay = gameRow.new("box", "display", false);
 	var button = gameRow.new("box", "button");
-
-	var saveButton = upgradeRow.new("box", "button");
-	var loadButton = upgradeRow.new("box", "button");
 
 	levelDisplay.style([["position", "inherit"],
 			["display", "flex"],
