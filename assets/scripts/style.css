@@ -3,3 +3,25 @@ body {
 	padding: 0;
 	user-select:none;
 }
+
+#button {
+	transition: box-shadow 0.25s;
+	box-shadow: 0 1px 3px #111;
+}
+
+#button:hover {
+	box-shadow: 0 2px 5px black;
+}
+
+#display {
+	transition: box-shadow 0.25s;
+	box-shadow: 0 1px 3px #111;
+}
+
+#display:hover {
+	box-shadow: 0 2px 5px black;
+}
+
+#display p {
+	box-shadow: 0 2px 5px black;
+}
