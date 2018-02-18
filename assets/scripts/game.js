@@ -48,7 +48,6 @@ function Start() {
 			["margin-bottom", "5em"]]);
 	levelDisplay.size({width:"100px", height:"100px"});
 
-	button.move({y:"100px"});
 	button.size({height:"25px", width:"135px"});
 	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
 
