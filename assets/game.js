@@ -4,17 +4,17 @@ function Start() {
 	const canvas = document.getElementById("canvas");
 	const c = new cvg.Canvas(canvas, "600px", "450px", 60);
 
+	c.style([["background", "url('background.jpg')"],
+			["background-position", "center"],
+			["background-size", "cover"],
+			["display", "flex"]]);
+
 	var holding;
 
 	var maxLevel = 10000; // mL
 	var buttonLevel = 10;
 	var buttonDownLevel = 5;
 	var level = 0;
-
-	c.style([["background", "url('background.jpg')"],
-			["background-position", "center"],
-			["background-size", "cover"],
-			["display", "flex"]]);
 
 	var levelDisplay = c.new("text", "display");
 	var button = c.new("box", "button");
