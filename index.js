@@ -14,6 +14,7 @@ function createWindow() {
 	}));
 
 	win.setSize(614, 507);
+	win.setResizable(false);
 	win.focus();
 
 	win.on("closed", () => {
