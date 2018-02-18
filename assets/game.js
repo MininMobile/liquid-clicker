@@ -18,8 +18,9 @@ function Start() {
 	var levelDisplay = c.new("text", "display");
 	var button = c.new("box", "button");
 
-	button.style([["background", "black"]]);
+	button.style([["background", "black"], ["border-radius", "3px"]]);
 	button.move({y:"100px"});
+	button.size({height:"25px"});
 
 	c.on("loop", () => {
 		levelDisplay.content(level.toString());
@@ -33,9 +34,10 @@ function Start() {
 	}
 
 	button.element.onpointerup = (e) => {
-		holding = clearInterval(holding);
-		
 		level += buttonLevel;
 		if (level > maxLevel) level = maxLevel;
 	}
+
+	document.onpointerup = (e) => { holding = clearInterval(holding); }
+	document.onpointerout = (e) => { holding = clearInterval(holding); }
 }
