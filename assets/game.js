@@ -13,7 +13,8 @@ function Start() {
 
 	c.style([["background", "url('background.jpg')"],
 			["background-position", "center"],
-			["background-size", "cover"]]);
+			["background-size", "cover"],
+			["display", "flex"]]);
 
 	var levelDisplay = c.new("text", "display");
 	var button = c.new("box", "button");
