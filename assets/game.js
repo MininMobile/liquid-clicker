@@ -18,10 +18,16 @@ function Start() {
 	var levelDisplay = c.new("text", "display");
 	var button = c.new("box", "button");
 
-	button.style([["background", "black"], ["border-radius", "3px"], ["color", "white"], ["padding", "0.2em"]]);
+	button.style([["background", "black"],
+			["border-radius", "3px"],
+			["color", "white"],
+			["padding", "0.2em"],
+			["display", "flex"],
+			["justify-content", "center"],
+			["align-items", "center"]]);
 	button.move({y:"100px"});
 	button.size({height:"25px", width:"135px"});
-	button.content("ｄｉｓｐｅｎｓｅ");
+	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
 
 	c.on("loop", () => {
 		levelDisplay.content(level.toString());
