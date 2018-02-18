@@ -6,6 +6,7 @@ function Start() {
 
 	var maxLevel = 10000; // mL
 	var buttonLevel = 10;
+	var buttonDownLevel = 5;
 	var level = 0;
 
 	c.style([["background", "url('background.jpg')"],
@@ -21,6 +22,11 @@ function Start() {
 	c.on("loop", () => {
 		levelDisplay.content(level.toString());
 	});
+
+	button.element.onpointerdown = (e) => {
+		level += buttonDownLevel;
+		if (level > maxLevel) level = maxLevel;
+	}
 
 	button.element.onpointerup = (e) => {
 		level += buttonLevel;
