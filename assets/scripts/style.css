@@ -6,11 +6,6 @@ body {
 	user-select:none;
 }
 
-#button {
-	transition: box-shadow 0.25s;
-	box-shadow: 0 1px 3px #111;
-}
-
 #button:hover {
 	box-shadow: 0 2px 5px black;
 }
@@ -37,9 +32,26 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: box-shadow 0.25s;
+	box-shadow: 0 1px 3px #111;
 	cursor: pointer;
 }
 
-#button * {
+#saveButton {
+	position: inherit !important;
+	width: 100% !important;
+	transition: background 0.1s;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
+	flex: 1;
 }
+
+#saveButton:hover {
+	background: rgba(0,0,0,0.5);
+}
+
+#button * { cursor: pointer; }
+#saveButton * { cursor: pointer; }
