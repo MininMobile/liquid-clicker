@@ -17,12 +17,17 @@ function Start() {
 	var level = 0;
 
 	var gameRow = c.new("box", "row1");
-	gameRow.style([["position", "inherit"], ["display", "flex"], ["flex", "1"], ["background", "rgba(0,0,0,0.2)"]]);
 	gameRow.size({width:"inherit", height:"inherit"});
+	gameRow.style([["position", "inherit"],
+			["display", "flex"],
+			["flex", "1"],
+			["background", "rgba(0,0,0,0.2)"]]);
 
 	var upgradeRow = c.new("box", "row2");
-	upgradeRow.style([["position", "inherit"], ["display", "flex"], ["flex", "1"]]);
 	upgradeRow.size({width:"inherit", height:"inherit"});
+	upgradeRow.style([["position", "inherit"],
+			["display", "flex"],
+			["flex", "1"]]);
 
 	var levelDisplay = gameRow.new("text", "display");
 	var button = gameRow.new("box", "button");
