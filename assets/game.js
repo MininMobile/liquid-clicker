@@ -20,7 +20,9 @@ function Start() {
 	gameRow.size({width:"inherit", height:"inherit"});
 	gameRow.style([["position", "inherit"],
 			["display", "flex"],
-			["flex", "1"]]);
+			["flex", "1"],
+			["justify-content", "center"],
+			["align-items", "center"]]);
 
 	var upgradeRow = c.new("box", "row2");
 	upgradeRow.size({width:"inherit", height:"inherit"});
@@ -32,7 +34,10 @@ function Start() {
 	var levelDisplay = gameRow.new("text", "display");
 	var button = gameRow.new("box", "button");
 
-	button.style([["background", "black"],
+	levelDisplay.style([["position", "inherit"]]);
+
+	button.style([["position", "inherit"],
+			["background", "black"],
 			["border-radius", "3px"],
 			["color", "white"],
 			["padding", "0.2em"],
