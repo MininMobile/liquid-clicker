@@ -2,7 +2,7 @@ const cvg = require("convergejs");
 
 function Start() {
 	const canvas = document.getElementById("canvas");
-	const c = new cvg.Canvas(canvas, "100%", "100%", 60);
+	const c = new cvg.Canvas(canvas, "100%", "100%", 10);
 
 	c.style([["background", "url('images/background.jpg')"],
 			["background-position", "center"],
@@ -13,6 +13,8 @@ function Start() {
 
 	let level = 0; // mL
 	let maxLevel = 1000; // mL
+	let money = 0;
+	let mratio = 10;
 	let buttonLevel = 20; // liqui on click
 	let buttonDownLevel = 5; // liquid on hold
 
@@ -59,16 +61,16 @@ function Start() {
 			["color", "white"],
 			["margin-bottom", "5em"]]);
 
-		let button = gameRow.new("box", "button");
-		button.size({ height:"25px", width:"135px" });
-		button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
+	let button = gameRow.new("box", "button");
+	button.size({ height:"25px", width:"135px" });
+	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
 
-		let sell = gameRow.new("box", "sell");
-		sell.size({ height:"25px", width:"135px" });
-		sell.element.innerHTML = "<p style='margin:0; padding:0;'>ｂｅｇｏｎｅ</p>";
+	let sell = gameRow.new("box", "sell");
+	sell.size({ height:"25px", width:"135px" });
+	sell.element.innerHTML = "<p style='margin:0; padding:0;'>ｂｅｇｏｎｅ</p>";
 
 	c.on("loop", () => {
-		levelDisplay.element.innerHTML = `<p style='margin:0; padding:0;'>${level.toString()}</p>`;
+		levelDisplay.element.innerHTML = `<p style="margin:0; padding:0;">${level}mL</p><p style="margin:0; padding:0;">$${money}</p>`;
 	});
 
 	button.element.onpointerdown = (e) => {
