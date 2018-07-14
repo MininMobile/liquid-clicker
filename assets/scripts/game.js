@@ -59,9 +59,13 @@ function Start() {
 			["color", "white"],
 			["margin-bottom", "5em"]]);
 
-	let button = gameRow.new("box", "button");
-	button.size({ height:"25px", width:"135px" });
-	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
+		let button = gameRow.new("box", "button");
+		button.size({ height:"25px", width:"135px" });
+		button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
+
+		let sell = gameRow.new("box", "sell");
+		sell.size({ height:"25px", width:"135px" });
+		sell.element.innerHTML = "<p style='margin:0; padding:0;'>ｂｅｇｏｎｅ</p>";
 
 	c.on("loop", () => {
 		levelDisplay.element.innerHTML = `<p style='margin:0; padding:0;'>${level.toString()}</p>`;
