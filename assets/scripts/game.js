@@ -85,6 +85,11 @@ function Start() {
 		if (level > maxLevel) level = maxLevel;
 	}
 
+	sell.element.onpointerdown = (e) => {
+		money += level / mratio;
+		level = 0;
+	}
+
 	document.onpointerup = (e) => { holding = clearInterval(holding); }
 	document.onpointerout = (e) => { holding = clearInterval(holding); }
 }
