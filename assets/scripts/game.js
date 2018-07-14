@@ -36,7 +36,7 @@ function Start() {
 
 	let saveButton = upgradeRow.new("box", "saveButton");
 	saveButton.element.innerHTML = "<p style='margin:0; padding:0;'>Save</p>";
-	let loadButton = upgradeRow.new("box", "saveButton");
+	let loadButton = upgradeRow.new("box", "loadButton");
 	loadButton.element.innerHTML = "<p style='margin:0; padding:0;'>Load</p>";
 
 	let upgradesContainer = upgradeRow.new("box", "row2-1");

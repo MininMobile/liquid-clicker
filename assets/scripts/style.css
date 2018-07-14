@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
-* { cursor: default; font-family: 'Nanum Gothic', sans-serif; }
+* {
+	cursor: default;
+	font-family: 'Nanum Gothic', sans-serif;
+}
 
 html, body {
 	margin: 0;
@@ -10,52 +13,59 @@ html, body {
 	user-select: none;
 }
 
-#button:hover {
-	box-shadow: 0 2px 5px black;
-}
-
 #display {
 	transition: box-shadow 0.25s;
 	box-shadow: 0 1px 3px #111;
-}
-
-#display:hover {
-	box-shadow: 0 2px 5px black;
 }
 
 #display p {
 	text-shadow: 0 2px 5px black;
 }
 
+#display:hover {
+	box-shadow: 0 2px 5px black;
+}
+
 #button {
 	position: inherit !important;
-	background: black;
+	background: rgba(0, 0, 0, 0.6);
 	border-radius: 3px;
 	color: white;
 	padding: 0.2em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: box-shadow 0.25s;
-	box-shadow: 0 1px 3px #111;
+	transition: box-shadow 0.2s, background 0.2s;
+	box-shadow: none;
 	cursor: pointer;
 }
 
-#saveButton {
-	position: inherit !important;
+#button:hover {
+	box-shadow: 0 3px 0.8em black;
+	background: rgba(0, 0, 0, 1);
+}
+
+#button:active, #button:focus {
+	box-shadow: none;
+}
+
+#saveButton, #loadButton {
 	width: 100% !important;
-	transition: background 0.1s;
 	color: white;
+	background: rgba(0, 0, 0, 0.2);
+	transition: background 0.1s;
+	flex: 1;
+	position: inherit !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	flex: 1;
 }
 
-#saveButton:hover {
-	background: rgba(0,0,0,0.5);
+#saveButton:hover, #loadButton:hover {
+	background: rgba(0,0,0,0.6);
 }
 
-#button * { cursor: pointer; }
-#saveButton * { cursor: pointer; }
+ #button *, #saveButton *, #loadButton * {
+	 cursor: pointer;
+}
