@@ -11,10 +11,10 @@ function Start() {
 
 	let holding;
 
-	let maxLevel = 10000; // mL
-	let buttonLevel = 10;
-	let buttonDownLevel = 5;
-	let level = 0;
+	let level = 0; // mL
+	let maxLevel = 1000; // mL
+	let buttonLevel = 20; // liqui on click
+	let buttonDownLevel = 5; // liquid on hold
 
 	let gameRow = c.new("box", "row1");
 	gameRow.size({width:"inherit", height:"inherit"});
