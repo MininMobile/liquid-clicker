@@ -17,7 +17,7 @@ function Start() {
 	let buttonDownLevel = 5; // liquid on hold
 
 	let gameRow = c.new("box", "row1");
-	gameRow.size({width:"inherit", height:"inherit"});
+	gameRow.size({ width:"inherit", height:"inherit" });
 	gameRow.style([["position", "inherit"],
 			["display", "flex"],
 			["flex", "1"],
@@ -26,7 +26,7 @@ function Start() {
 			["align-items", "center"]]);
 
 	let upgradeRow = c.new("box", "row2");
-	upgradeRow.size({width:"inherit", height:"inherit"});
+	upgradeRow.size({ width:"inherit", height:"inherit" });
 	upgradeRow.style([["position", "inherit"],
 			["display", "flex"],
 			["flex", "1"],
@@ -40,7 +40,7 @@ function Start() {
 	loadButton.element.innerHTML = "<p style='margin:0; padding:0;'>Load</p>";
 
 	let upgradesContainer = upgradeRow.new("box", "row2-1");
-	upgradesContainer.size({width:"100%", height:"initial"});
+	upgradesContainer.size({ width:"100%", height:"initial" });
 	upgradesContainer.style([["position", "inherit"],
 			["display", "flex"],
 			["flex-direction", "column"],
@@ -49,8 +49,7 @@ function Start() {
 			["background", "rgba(0,0,0,0.2)"]]);
 
 	let levelDisplay = gameRow.new("box", "display", false);
-	let button = gameRow.new("box", "button");
-
+	levelDisplay.size({ width:"100px", height:"100px" });
 	levelDisplay.style([["position", "inherit"],
 			["display", "flex"],
 			["justify-content", "center"],
@@ -59,9 +58,9 @@ function Start() {
 			["background", "rgba(0,0,0,0.5)"],
 			["color", "white"],
 			["margin-bottom", "5em"]]);
-	levelDisplay.size({width:"100px", height:"100px"});
 
-	button.size({height:"25px", width:"135px"});
+	let button = gameRow.new("box", "button");
+	button.size({ height:"25px", width:"135px" });
 	button.element.innerHTML = "<p style='margin:0; padding:0;'>ｄｉｓｐｅｎｓｅ</p>";
 
 	c.on("loop", () => {

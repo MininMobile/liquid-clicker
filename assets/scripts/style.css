@@ -53,7 +53,7 @@ html, body {
 	width: 100% !important;
 	color: white;
 	background: rgba(0, 0, 0, 0.2);
-	transition: background 0.1s;
+	transition: background 0.2s;
 	flex: 1;
 	position: inherit !important;
 	display: flex;
@@ -63,7 +63,11 @@ html, body {
 }
 
 #saveButton:hover, #loadButton:hover {
-	background: rgba(0,0,0,0.6);
+	background: rgba(0, 0, 0, 0.6);
+}
+
+#saveButton:active, #saveButton:focus, #loadButton:active, #loadButton:focus {
+	background: rgba(0, 0, 0, 0);
 }
 
  #button *, #saveButton *, #loadButton * {
