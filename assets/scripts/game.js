@@ -2,21 +2,21 @@ const cvg = require("convergejs");
 
 function Start() {
 	const canvas = document.getElementById("canvas");
-	const c = new cvg.Canvas(canvas, "600px", "450px", 60);
+	const c = new cvg.Canvas(canvas, "100%", "100%", 60);
 
 	c.style([["background", "url('images/background.jpg')"],
 			["background-position", "center"],
 			["background-size", "cover"],
 			["display", "flex"]]);
 
-	var holding;
+	let holding;
 
-	var maxLevel = 10000; // mL
-	var buttonLevel = 10;
-	var buttonDownLevel = 5;
-	var level = 0;
+	let maxLevel = 10000; // mL
+	let buttonLevel = 10;
+	let buttonDownLevel = 5;
+	let level = 0;
 
-	var gameRow = c.new("box", "row1");
+	let gameRow = c.new("box", "row1");
 	gameRow.size({width:"inherit", height:"inherit"});
 	gameRow.style([["position", "inherit"],
 			["display", "flex"],
@@ -25,7 +25,7 @@ function Start() {
 			["justify-content", "center"],
 			["align-items", "center"]]);
 
-	var upgradeRow = c.new("box", "row2");
+	let upgradeRow = c.new("box", "row2");
 	upgradeRow.size({width:"inherit", height:"inherit"});
 	upgradeRow.style([["position", "inherit"],
 			["display", "flex"],
@@ -34,12 +34,12 @@ function Start() {
 			["align-items", "center"],
 			["background", "rgba(0,0,0,0.2)"]]);
 
-	var saveButton = upgradeRow.new("box", "saveButton");
+	let saveButton = upgradeRow.new("box", "saveButton");
 	saveButton.element.innerHTML = "<p style='margin:0; padding:0;'>Save</p>";
-	var loadButton = upgradeRow.new("box", "saveButton");
+	let loadButton = upgradeRow.new("box", "saveButton");
 	loadButton.element.innerHTML = "<p style='margin:0; padding:0;'>Load</p>";
 
-	var upgradesContainer = upgradeRow.new("box", "row2-1");
+	let upgradesContainer = upgradeRow.new("box", "row2-1");
 	upgradesContainer.size({width:"100%", height:"initial"});
 	upgradesContainer.style([["position", "inherit"],
 			["display", "flex"],
@@ -48,8 +48,8 @@ function Start() {
 			["flex", "8"],
 			["background", "rgba(0,0,0,0.2)"]]);
 
-	var levelDisplay = gameRow.new("box", "display", false);
-	var button = gameRow.new("box", "button");
+	let levelDisplay = gameRow.new("box", "display", false);
+	let button = gameRow.new("box", "button");
 
 	levelDisplay.style([["position", "inherit"],
 			["display", "flex"],
