@@ -199,7 +199,7 @@ class Elem {
 	}
 
 	/**
-	 * Creates new Child Element in this Elememt
+	 * Creates new Child Element in this Element
 	 * @param {string} type Type of Element
 	 * @param {string} tag Name of Element
 	 * @returns {Elem} New Child Element

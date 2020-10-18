@@ -12,7 +12,7 @@ function Start() {
 	let level = 0; // mL
 	let maxLevel = 1000; // mL
 	let money = 0;
-	let mratio = 10;
+	let mRatio = 10;
 	let buttonLevel = 20; // liquid on click
 	let buttonDownLevel = 5; // liquid on hold
 
@@ -84,7 +84,7 @@ function Start() {
 	}
 
 	sell.element.onpointerdown = (e) => {
-		money += level / mratio;
+		money += level / mRatio;
 		level = 0;
 	}
 
