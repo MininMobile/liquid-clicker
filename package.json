@@ -1,0 +1,22 @@
+{
+  "name": "liquid-clicker",
+  "version": "1.0.0",
+  "description": "make liquid.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mininmobile/liquid-clicker.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mininmobile/liquid-clicker/issues"
+  },
+  "homepage": "https://github.com/mininmobile/liquid-clicker#readme",
+  "dependencies": {
+    "convergejs": "^4.8.10"
+  }
+}

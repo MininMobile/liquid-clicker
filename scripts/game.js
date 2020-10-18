@@ -15,7 +15,7 @@ function Start() {
 	let maxLevel = 1000; // mL
 	let money = 0;
 	let mratio = 10;
-	let buttonLevel = 20; // liqui on click
+	let buttonLevel = 20; // liquid on click
 	let buttonDownLevel = 5; // liquid on hold
 
 	let gameRow = c.new("box", "row1");
