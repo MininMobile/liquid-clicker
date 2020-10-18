@@ -1,10 +1,8 @@
-const cvg = require("convergejs");
-
 function Start() {
 	const canvas = document.getElementById("canvas");
-	const c = new cvg.Canvas(canvas, "100%", "100%", 10);
+	const c = new Canvas(canvas, "100%", "100%", 10);
 
-	c.style([["background", "url('images/background.jpg')"],
+	c.style([["background", "url('src/img/background.jpg')"],
 			["background-position", "center"],
 			["background-size", "cover"],
 			["display", "flex"]]);
