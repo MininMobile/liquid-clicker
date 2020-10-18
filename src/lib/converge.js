@@ -38,7 +38,7 @@ class Canvas {
 		document.addEventListener("keydown", this.ev.keyDown);
 		document.addEventListener("keyup", this.ev.keyUp);
 
-		setInterval(() => { this.ev.loop(); }, 1000/this.fps)
+		setInterval(() => { this.ev.loop(); }, 1000/this.fps);
 	}
 
 	/**
@@ -168,14 +168,14 @@ class Elem {
 			"text":"p"
 		}
 
-		/** @type {DOMTokenList} */
-		this.classes = this.element.classList;
-
 		/** @type {string} */
 		this.tag = tag;
 
 		/** @type {Element} */
 		this.element = document.createElement(elementTypes[type]);
+
+		/** @type {DOMTokenList} */
+		this.classes = this.element.classList;
 
 		/** @type {string[]} */
 		this.elementRegister = [ ];
@@ -189,8 +189,8 @@ class Elem {
 		this.ev.mouseDown = () => {};
 		this.ev.mouseUp = () => {};
 
-		this.c.addEventListener("pointerdown", this.ev.mouseDown);
-		this.c.addEventListener("pointerup", this.ev.mouseUp);
+		this.element.addEventListener("pointerdown", this.ev.mouseDown);
+		this.element.addEventListener("pointerup", this.ev.mouseUp);
 
 		this.element.setAttribute("id", tag);
 		this.element.style.position = "absolute";
